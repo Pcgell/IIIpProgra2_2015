@@ -17,20 +17,15 @@ public class Run {
 		}
 		
 		
-		//Ordenar de mayor a menor 
-		
+		//Invertir
+		Foo[] temp = new Foo[afoo.length];
+		int ultimo = afoo.length -1;
 		for(int i =0; i<afoo.length;i++)
 		{
-			for(int j = 0; j< afoo.length; j++)
-			{
-				if(afoo[i].getX() >= afoo[j].getX())
-				{
-					Foo temp = afoo[i];
-					afoo[i] = afoo[j];
-					afoo[j] = temp;
-				}
-			}
+			temp[ultimo - i] = afoo[i];
 		}
+		
+		afoo = temp;
 		
 
 		for (Foo foo : afoo) {
