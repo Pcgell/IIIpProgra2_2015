@@ -13,7 +13,7 @@ public class Run {
 		Foo afoo[] = new Foo[f.getX()];
 		
 		for (int i = 0; i < afoo.length; i++) {
-			afoo[i] = new Foo(i+1);
+			afoo[i] = new Bar(i+1,afoo.length - i);
 		}
 		
 		

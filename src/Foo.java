@@ -1,6 +1,7 @@
 
 public class Foo {
-	protected int m_iX;
+	
+	private int m_iX;
 	
 	public void setX(int iX)
 	{
