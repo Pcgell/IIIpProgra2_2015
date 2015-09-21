@@ -1,5 +1,6 @@
 
-public class CartaAbstracta {
+
+abstract class CartaAbstracta {
 	public static final int NUMERO_AS = 1;
 	public static final int NUMERO_JOTA = 11;
 	public static final int NUMERO_REYNA = 12;
@@ -35,6 +36,8 @@ public class CartaAbstracta {
 	}
 	public CartaAbstracta(int _iValor)
 	{
+		if(_iValor <= 0 || _iValor > 13)
+			throw new IllegalArgumentException("No se puede tener cartas de mayores a 13 y menores a 1");
 		m_iValor = _iValor;
 	}
 }

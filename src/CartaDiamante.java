@@ -1,5 +1,5 @@
 
-public class CartaDiamante extends CartaAbstracta {
+final class CartaDiamante extends CartaAbstracta {
 
 	public CartaDiamante(int _iValor) {
 		super(_iValor);
