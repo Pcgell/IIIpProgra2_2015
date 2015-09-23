@@ -1,28 +1,24 @@
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 public class Run {
 	public static void main (String[] args)
 	{
-		CartaDiamante cartaDiamante = new CartaDiamante(13);
-		System.out.println(cartaDiamante);
-		CartaTrebol cartaTrebol = new CartaTrebol(1);
-		System.out.println(cartaTrebol);
-		CartaCorazon cartaCorazon = new CartaCorazon(1);
-		System.out.println(cartaCorazon);
-		
-		int[] arr = {1,3,4,6,7};
-		
-		System.out.println(arr[5]);
+		// Archivos conjunto de datos con nombre y extension.
+			// texto.
+			// binarios.
+		File f = new File("archivo.txt");
+		try {
+			FileWriter fw = new FileWriter(f);
+			fw.write("Kenneth Vittetoe ,7000 ,0.3\n");
+			fw.write("David velasquez ,8000 ,0.3\n");
+			fw.write("fernando Benitez ,5000 ,0.3\n");
+			fw.write("Axel Rose ,54000 ,0.2\n");
+			
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
-// proyecto car wash
-
-
-//  3 opciones
-//	Lavado
-//	Lavado y aspirado
-//	Lavado de motor
-
-// cajero y clentes 
-// personas nombre identidad
-//cajero sueldo y comission por venta
-//clientes  -monto total - ultima venta.
