@@ -11,7 +11,7 @@ public class Run {
 			// texto.
 			// binarios.
 		File f = new File("archivo.txt");
-		ArrayList<Cajero> arreglo = new ArrayList<Cajero>();
+		ArregloDinamicoCajero arreglo = new ArregloDinamicoCajero();
 		try {
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
@@ -37,8 +37,8 @@ public class Run {
 			e.printStackTrace();
 		}
 		
-		for (Cajero cajero : arreglo) {
-			System.out.println(cajero);
+		for(int i = 0; i < arreglo.getSize(); i++) {
+			System.out.println(arreglo.getCajero(i));
 		}
 	}
 }
