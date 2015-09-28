@@ -33,12 +33,15 @@ public class Run {
 			br.close();
 			fr.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		arreglo.Trim();
+		arreglo.RemoveCajero(1);
 		for(int i = 0; i < arreglo.getSize(); i++) {
 			System.out.println(arreglo.getCajero(i));
 		}
+		System.out.println(arreglo.getCajero(arreglo.getSize() - 1));
+		
+		//TODO : TAREA-escribir archivo2.txt de Cajeros con el nuevo arreglo.
 	}
 }

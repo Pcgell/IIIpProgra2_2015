@@ -35,9 +35,38 @@ public class ArregloDinamicoCajero {
 	
 	public Cajero getCajero(int indice)
 	{
+		if(indice < 0 || indice >= m_iSize)
+		{
+			throw new IndexOutOfBoundsException("indice fuera de rango: "+indice);
+		}
 		return m_pCajeros[indice];
 	}
 	
-	// public Cajero RemoveCajero(int indice)
-	// public void Trim();
+	 public Cajero RemoveCajero(int indice)
+	 {
+		 Cajero[] temp = new Cajero[m_pCajeros.length];
+		 Cajero retval = m_pCajeros[indice];
+		 
+		 for (int i = 0, j = 0; i < m_pCajeros.length; i++ )
+		 {
+			 if(i == indice)
+			 {
+				 continue;
+			 }
+			 temp[j] =  m_pCajeros[i]; 
+			 j++;
+		 }
+		 m_iSize = m_iSize - 1;
+		 m_pCajeros = temp;
+		 return retval;
+	 }
+	 public void Trim()
+	 {
+		 Cajero[] temp = new Cajero[getSize() + 1];
+		 for(int i = 0; i < getSize(); i++)
+		 {
+			 temp[i] = getCajero(i);
+		 }
+		 m_pCajeros = temp;
+	 }
 }
