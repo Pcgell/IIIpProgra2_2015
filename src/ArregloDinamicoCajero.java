@@ -69,4 +69,16 @@ public class ArregloDinamicoCajero {
 		 }
 		 m_pCajeros = temp;
 	 }
+	 
+	 public int BuscarPorNombre(String nombre)
+	 {
+		 for (int i = 0; i< getSize(); i++)
+		 {
+			 if(nombre == m_pCajeros[i].m_szNombre)
+			 {
+				 return i;
+			 }
+		 }
+		 return -1;
+	 }
 }
