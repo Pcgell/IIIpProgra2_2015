@@ -36,7 +36,7 @@ public class Run {
 			e.printStackTrace();
 		}
 		arreglo.Trim();
-		arreglo.RemoveCajero(1);
+		arreglo.RemoveCajero(0);
 		for(int i = 0; i < arreglo.getSize(); i++) {
 			System.out.println(arreglo.getCajero(i));
 		}

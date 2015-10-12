@@ -5,7 +5,7 @@ public class Cajero {
 	public float m_fComision;
 	public String toString()
 	{
-		return m_szNombre +" "+m_fSalario+" "+m_fComision ;
+		return m_szNombre +", "+m_fSalario+", "+m_fComision+"\n" ;
 		
 	}
 }
