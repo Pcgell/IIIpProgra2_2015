@@ -36,7 +36,7 @@ public class Circulo extends FiguraGeometrica{
 	}
 
 	@Override
-	public float getDiametro() {
+	public float getPerimetro() {
 		// 2 * 3.1416 * r
 		return (float)Math.PI * 2 * m_fRadio;
 	}
